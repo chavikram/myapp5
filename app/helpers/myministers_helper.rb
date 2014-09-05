@@ -1,0 +1,2 @@
+module MyministersHelper
+end

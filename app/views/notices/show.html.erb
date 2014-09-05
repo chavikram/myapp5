@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Session:</strong>
+  <%= @notice.session.desc %>
+</p>
+
+<p>
+  <strong>House diary no:</strong>
+  <%= @notice.house_diary_no %>
+</p>
+
+<p>
+  <strong>Answer date:</strong>
+  <%= @notice.answer_date %>
+</p>
+
+<p>
+  <strong>Subject:</strong>
+  <%= @notice.subject %>
+</p>
+
+<p>
+  <strong>Received date:</strong>
+  <%= @notice.received_date %>
+</p>
+
+<%= link_to 'Edit', edit_notice_path(@notice) %> |
+<%= link_to 'Back', notices_path %>

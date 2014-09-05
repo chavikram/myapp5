@@ -1,0 +1,31 @@
+<h1>Listing question_details</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Question text</th>
+      <th>Answer text</th>
+      <th>Statement text</th>
+      <th>Question</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @question_details.each do |question_detail| %>
+      <tr>
+        <td><%= question_detail.question_text %></td>
+        <td><%= question_detail.answer_text %></td>
+        <td><%= question_detail.statement_text %></td>
+        <td><%= question_detail.question %></td>
+        <td><%= link_to 'Show', question_detail %></td>
+        <td><%= link_to 'Edit', edit_question_detail_path(question_detail) %></td>
+        <td><%= link_to 'Destroy', question_detail, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Question detail', new_question_detail_path %>

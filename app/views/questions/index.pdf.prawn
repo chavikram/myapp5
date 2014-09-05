@@ -1,0 +1,1 @@
+pdf.table @questions.collect{ |p| [p.id,p.question_no, p.notice.house_diary_no,p.subject,p.answer_date.stamp("Jan 24,1999"),p.received_date.stamp("Jan 24,1999"),(p.ministers.collect{|m|m.name}).map(&:inspect).join(',')]}

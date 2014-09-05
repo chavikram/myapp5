@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  section_officer_id: 
+  under_secretary_id: 
+  director_id: 
+
+two:
+  name: MyString
+  section_officer_id: 
+  under_secretary_id: 
+  director_id: 

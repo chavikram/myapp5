@@ -1,0 +1,27 @@
+<h1>Listing myministers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Ministry</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @myministers.each do |myminister| %>
+      <tr>
+        <td><%= myminister.name %></td>
+        <td><%= myminister.ministry %></td>
+        <td><%= link_to 'Show', myminister %></td>
+        <td><%= link_to 'Edit', edit_myminister_path(myminister) %></td>
+        <td><%= link_to 'Destroy', myminister, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Myminister', new_myminister_path %>

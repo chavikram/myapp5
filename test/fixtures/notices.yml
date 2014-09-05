@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  session_id: 
+  house_diary_no: MyString
+  answer_date: 2014-08-30
+  subject: MyString
+  received_date: MyString
+
+two:
+  session_id: 
+  house_diary_no: MyString
+  answer_date: 2014-08-30
+  subject: MyString
+  received_date: MyString

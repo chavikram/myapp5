@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Session type:</strong>
+  <%= @session.session_type.name %>
+</p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @session.year %>
+</p>
+
+<%= link_to 'Edit', edit_session_path(@session) %> |
+<%= link_to 'Back', sessions_path %>

@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  question_type_id: 
+  notice_id: 
+  section_id: 
+  question_no: 1
+  session_id: 
+  subject: MyString
+  answer_date: 2014-08-30
+  received_date: 2014-08-30
+
+two:
+  question_type_id: 
+  notice_id: 
+  section_id: 
+  question_no: 1
+  session_id: 
+  subject: MyString
+  answer_date: 2014-08-30
+  received_date: 2014-08-30

@@ -1,0 +1,75 @@
+<%= nested_form_for(@question) do |f| %>
+  <% if @question.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@question.errors.count, "error") %> prohibited this question from being saved:</h2>
+
+      <ul>
+      <% @question.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="field">
+    <%= f.label :ministry_id %><br>
+    <%= f.collection_select :ministry_id,Ministry.all,:id,:name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :session_id %><br>
+    <%= f.collection_select :session_id,Session.all,:id,:desc %>
+  </div>
+
+  <div class="field">
+    <%= f.label :notice_id %><br>
+    <%= f.collection_select :notice_id,Notice.all,:id,:desc %>
+  </div>
+
+  <div class="field">
+    <%= f.label :section_id %><br>
+    <%= f.collection_select :section_id,Section.all,:id,:name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :question_no %><br>
+    <%= f.number_field :question_no %>
+  </div>
+
+  <div class="field">
+    <%= f.label :question_type_id %><br>
+    <%= f.collection_select :question_type_id,QuestionType.all,:id,:name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :subject %><br>
+    <%= f.text_field :subject %>
+  </div>
+
+  <div class="field">
+    <%= f.label :answer_date %><br>
+    <%= f.date_select :answer_date %>
+  </div>
+
+  <div class="field">
+    <%= f.label :received_date %><br>
+    <%= f.date_select :received_date %>
+  </div>
+	<div>
+	<%= f.fields_for :ministers do |minister_form| %>
+	<%= f.label :name %> <%= minister_form.collection_select :name_title_id,NameTitle.all,:id,:name %><br>
+	<%= f.label :owner %><%= minister_form.text_field :name %><br>
+
+	
+	<%= minister_form.link_to_remove "Remove this minister" %>
+	<% end %>
+
+	<p>
+		<%= f.link_to_add "Add a minister", :ministers %>
+	</p>
+</div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+
+<% end %>

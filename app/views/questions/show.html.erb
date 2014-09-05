@@ -1,0 +1,60 @@
+<%= link_to "Question (PDF)", question_path(@question,:format=>'pdf')%>
+<p id="notice"><%= notice %></p>
+<p>
+  <strong>Ministry:</strong>
+  <%= @question.ministry.name %>
+</p>
+
+<p>
+  <strong>Question type:</strong>
+  <%= @question.question_type.name %>
+</p>
+
+<p>
+  <strong>Notice:</strong>
+  <%= @question.notice.house_diary_no %>
+</p>
+
+<p>
+  <strong>Section:</strong>
+  <%= @question.section.name %>
+</p>
+
+<p>
+  <strong>Question no:</strong>
+  <%= @question.question_no %>
+</p>
+
+<p>
+  <strong>Session:</strong>
+  <%= @question.session.desc %>
+</p>
+
+<p>
+  <strong>Subject:</strong>
+  <%= @question.subject %>
+</p>
+
+<p>
+  <strong>Answer date:</strong>
+  <%= @question.answer_date %>
+</p>
+
+<p>
+  <strong>Received date:</strong>
+  <%= @question.received_date %>
+</p>
+<p><strong>Minister List:</strong>
+  <div>
+  <%@question.ministers.each do |t|%>
+  	<div>
+  		<%= t.name_title%>
+  		<%= t.name%><br/><br/>
+  		
+  	</div>
+  	
+  <%end%>
+  </div>
+</p>
+<%= link_to 'Edit', edit_question_path(@question) %> |
+<%= link_to 'Back', questions_path %>

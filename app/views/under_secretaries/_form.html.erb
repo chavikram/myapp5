@@ -1,0 +1,21 @@
+<%= form_for(@under_secretary) do |f| %>
+  <% if @under_secretary.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@under_secretary.errors.count, "error") %> prohibited this under_secretary from being saved:</h2>
+
+      <ul>
+      <% @under_secretary.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

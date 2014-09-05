@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @project.name %>
+  <p>Task List</p>
+  <ul>
+  <%@project.tasks.each do |t|%>
+  	<li><%= t.name%></li>
+  <%end%>
+  </ul>
+  
+  
+  <p>Address List</p>
+  <div>
+  <%@project.addresses.each do |t|%>
+  	<div>
+  		<%= t.plot_no%><br/>
+  		<%= t.street_name%><br/>
+  		<%= t.colony_name%><br/>
+  		<%= t.city%><br/>
+  		<%= t.state%><br/>
+  		<%= t.pincode%><br/>
+  		<%= t.mobile%><br/>
+  		
+  	</div>
+  	
+  <%end%>
+  </div>
+  
+  
+</p>
+
+<%= link_to 'Edit', edit_project_path(@project) %> |
+<%= link_to 'Back', projects_path %>
