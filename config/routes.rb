@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  root to:'sections#index'
+  root to:"sections#index"
   
   resources :myministers
 
