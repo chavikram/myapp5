@@ -9,7 +9,7 @@ class DeviseOverrides::OmniauthCallbacksController < Devise::OmniauthCallbacksCo
       redirect_to edit_user_registration_path and return
       
     end
-    binding.pry
+    #binding.pry
     user = User.from_omniauth(omniauth)
     store_location_for(user, request.env['omniauth.origin']) if request.env['omniauth.origin']
     if user.persisted?
