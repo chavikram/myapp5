@@ -55,4 +55,3 @@ gem 'stamp'
 gem 'six'
 gem 'jazz_hands'
 
-gem 'rails_12factor', group: :production
