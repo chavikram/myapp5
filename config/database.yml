@@ -8,7 +8,6 @@
 development:
   adapter: postgresql
   encoding: unicode
-  host: localhost
   database: test2_dev
   pool: 5
   username: test2
@@ -17,7 +16,6 @@ development:
 test:
   adapter: postgresql
   encoding: unicode
-  host: localhost
   database: test2_test
   pool: 5
   username: test2
@@ -26,7 +24,6 @@ test:
 production:
   adapter: postgresql
   encoding: unicode
-  host: localhost
   database: test2_prod
   pool: 5
   username: test2
